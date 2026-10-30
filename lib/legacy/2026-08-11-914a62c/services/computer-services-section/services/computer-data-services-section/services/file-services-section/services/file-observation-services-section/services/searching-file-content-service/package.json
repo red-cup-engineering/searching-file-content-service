@@ -1,0 +1,23 @@
+{
+  "name": "@red-cup-engineering/searching-file-content-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Searches regular text files beneath a directory for a literal string.",
+  "bin": {
+    "search-file-content": "./scripts/search-file-content.mjs"
+  },
+  "exports": {
+    ".": "./scripts/search-file-content.mjs",
+    "./search-file-content": "./scripts/search-file-content.mjs"
+  },
+  "scripts": {
+    "check": "node --check scripts/search-file-content.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test && npm pack --dry-run"
+  },
+  "files": ["scripts"],
+  "engines": {
+    "node": ">=22"
+  }
+}
